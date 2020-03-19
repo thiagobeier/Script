@@ -27,7 +27,37 @@ New and all scripts from Technet Gallery moved to here.
 
 8 - [Generate Random Password (ADDS & Azure AD / Office365)](https://github.com/thiagobeier/scripts/tree/master/8)
 
+9 - [Retrieve all Office365 users and compare their displayname with ADDS](https://github.com/thiagobeier/scripts/tree/master/9)
 
+10 - [Monitor a folder size on real-time every hour.](https://github.com/thiagobeier/scripts/tree/master/10)
+
+11 - [ADFS - Export](https://github.com/thiagobeier/scripts/tree/master/11)
+
+12 - [Creates a Standard User for ADDS and Office365 Management](https://github.com/thiagobeier/scripts/tree/master/12)
+
+13 - [Retrieve all Office365 users and compare their UPN (userprincipalname) with ADDS] (https://github.com/thiagobeier/scripts/tree/master/13)
+
+14 - [Configure your 1st ADDS Server](https://github.com/thiagobeier/scripts/tree/master/14)
+
+15 - [Office365, Exchange, SharePoint and Skype For Business Powershell Profile Script(https://github.com/thiagobeier/scripts/tree/master/15)
+
+16 - [Export All Distribution Lists Information and its members to CSV](https://github.com/thiagobeier/scripts/tree/master/16)
+
+17 - [Check if a DL (Distribution List) exists on Office 365](https://github.com/thiagobeier/scripts/tree/master/17)
+
+18 - [Office365 & Azure Powershell Management Functions](https://github.com/thiagobeier/scripts/tree/master/18)
+
+19 - [SCCM Inventory and Assessment Scripts](https://github.com/thiagobeier/scripts/tree/master/19)
+
+20 - [Check ADDS attributes (email, proxysmtpaddresses)](https://github.com/thiagobeier/scripts/tree/master/20)
+
+21 - [Hyperv-VMM-2012R2-UpdateKBList](https://github.com/thiagobeier/scripts/tree/master/21)
+
+22 - [SCCM inventory & assessment](https://github.com/thiagobeier/scripts/tree/master/22)
+
+23 - [Export SCCM apps, task sequence, collections, queries and packages.](https://github.com/thiagobeier/scripts/tree/master/23)
+
+24 - [Add Multiple Users Exchange Online contacts permission](https://github.com/thiagobeier/scripts/tree/master/24)
 
 **Feedbak**
 
