@@ -69,4 +69,5 @@ Regards,
 
 **Thiago Beier**
 https://thiagobeier.wordpress.com
+
 **Copyright © 2020 Thiago Beier Blog**
