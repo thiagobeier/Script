@@ -35,11 +35,11 @@ New and all scripts from Technet Gallery moved to here.
 
 12 - [Creates a Standard User for ADDS and Office365 Management](https://github.com/thiagobeier/scripts/tree/master/12)
 
-13 - [Retrieve all Office365 users and compare their UPN (userprincipalname) with ADDS] (https://github.com/thiagobeier/scripts/tree/master/13)
+13 - [Retrieve all Office365 users and compare their UPN userprincipalname with ADDS](https://github.com/thiagobeier/scripts/tree/master/13)
 
 14 - [Configure your 1st ADDS Server](https://github.com/thiagobeier/scripts/tree/master/14)
 
-15 - [Office365, Exchange, SharePoint and Skype For Business Powershell Profile Script(https://github.com/thiagobeier/scripts/tree/master/15)
+15 - [Office365, Exchange, SharePoint and Skype For Business Powershell Profile Script](https://github.com/thiagobeier/scripts/tree/master/15)
 
 16 - [Export All Distribution Lists Information and its members to CSV](https://github.com/thiagobeier/scripts/tree/master/16)
 
