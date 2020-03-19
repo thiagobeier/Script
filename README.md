@@ -11,6 +11,8 @@ New and all scripts from Technet Gallery moved to here.
 
 **Posts in this blog are provided “AS IS” with no warranties, and confers no rights.**
 
+1 - [Read domain list from CSV and export email domain data.](https://github.com/thiagobeier/scripts/tree/master/1)
+
 **Feedbak**
 
 Please use the Issues tab to provide feedback. I will periodically create new files to incorporate the changes and work if you as you'd like to.
