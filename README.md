@@ -92,6 +92,10 @@ permission](https://github.com/thiagobeier/scripts/tree/master/24)
 25 – [Connect to office 365, Exchange Online and Teams Using
 PowerShell](https://github.com/thiagobeier/scripts/tree/master/25)
 
+25 – [Search user and remove from a Team on Microsoft
+Teams](https://github.com/thiagobeier/scripts/tree/master/26)
+
+  
 **Feedback**
 
 Please use the Issues tab to provide feedback. I will periodically create new
