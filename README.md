@@ -95,6 +95,9 @@ PowerShell](https://github.com/thiagobeier/scripts/tree/master/25)
 26 – [Search user and remove from a Team on Microsoft
 Teams](https://github.com/thiagobeier/scripts/tree/master/26)
 
+27 – [ADDS, Office 365 and Teams management
+Groups](https://github.com/thiagobeier/scripts/tree/master/27)
+
 **Feedback**
 
 Please use the Issues tab to provide feedback. I will periodically create new
