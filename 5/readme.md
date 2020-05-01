@@ -13,13 +13,15 @@ You can also combine this script with another one to add members to DL
 
 **Testing the csv file:**
 
-*Import-Csv .\\create-dl.csv *
+*Import-Csv .\\create-dl.csv {added to the repo}*
 
 **You should see the following**
 
 ![https://gallery.technet.microsoft.com/site/view/file/226392/1/3.png](media/b82cbecad38018c10d36e5e3dfb03d84.png)
 
- 
+https://gallery.technet.microsoft.com/site/view/file/226392/1/3.png
+
+https://gallery.technet.microsoft.com/site/view/file/226392/1/3.png
 
 **PowerShell**
 
@@ -27,7 +29,7 @@ You can also combine this script with another one to add members to DL
 
 \# Author Thiago Beier thiago.beier\@gmail.com     
 
-\# Version: 1.0 - 2020-FEB-28    
+\# Version: 2.0 - 2020-MAI-01    
 
 \# Create a DL (Distribution List on Office 365) from CSV file 
 
@@ -41,28 +43,17 @@ You can also combine this script with another one to add members to DL
 
 \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#  
 
- 
+Import-Csv .\\create-dl.csv \| foreach {
 
-**Import-Csv** .\\create-dl.csv \| **foreach** { 
+write-host "Creating DL:" \$_.dlistname -ForegroundColor Blue
 
- 
+write-host \$_.dlistname -ForegroundColor green
 
-write-host "Creating DL:" \$_.dlname -ForegroundColor Blue 
+New-DistributionGroup -Name \$*.dlistname -Alias \$*.dlalias -DisplayName
+\$*.dldisplayname -PrimarySmtpAddress \$*.dlsmtpaddress -Type security
 
-write-host \$_.dlname -ForegroundColor green 
+write-host \$_.dlalias -ForegroundColor Yellow
 
-New-DistributionGroup -Name \$_.dlname -Alias \$_.alias -**Type** security 
-
- 
-
-write-host \$_.alias -ForegroundColor Yellow 
-
-Set-DistributionGroup \$_.dlname -HiddenFromAddressListsEnabled \$True 
-
- 
-
- 
+Set-DistributionGroup \$_.dlistname -HiddenFromAddressListsEnabled \$True
 
 }
-
- 
