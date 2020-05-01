@@ -17,7 +17,13 @@ You can also combine this script with another one to add members to DL
 
 **You should see the following**
 
-![https://gallery.technet.microsoft.com/site/view/file/226392/1/3.png](media/b82cbecad38018c10d36e5e3dfb03d84.png)
+![](media/b5ede4ca5c29a1b1eba72555ac9d1af9.png)
+
+After
+
+![](media/99d72939e87113c8aed6959980dc11a2.png)
+
+https://gallery.technet.microsoft.com/site/view/file/226392/1/3.png
 
 https://gallery.technet.microsoft.com/site/view/file/226392/1/3.png
 
