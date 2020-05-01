@@ -8,7 +8,9 @@ file 
 You just need a csv file with two columns: distribution list name (dlistname)
 and member (members)
 
-![https://gallery.technet.microsoft.com/site/view/file/226396/1/5.png](media/10655b597b5bf332e2e65413aada3859.png)
+![](media/cb2742bf953a876c67a29f85b542ec6e.png)
+
+https://gallery.technet.microsoft.com/site/view/file/226396/1/5.png
 
 You can also combine this script with another one to add members to DL
 (Distribution Lists) as well.
@@ -19,11 +21,9 @@ You can also combine this script with another one to add members to DL
 
 **You should see the following**
 
-![https://gallery.technet.microsoft.com/site/view/file/226395/1/4.png](media/0912dbc29f3155b006bbd2c653060620.png)
+![](media/161dad7b0db9361a0b98ab772a5df58c.png)
 
- 
-
- 
+https://gallery.technet.microsoft.com/site/view/file/226395/1/4.png
 
 **PowerShell**
 
@@ -45,22 +45,12 @@ You can also combine this script with another one to add members to DL
 
 \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#  
 
- 
-
 \# 
 
 **Import-Csv** .\\add-members-to-dl01.csv \| **foreach** {  
 
- 
+write-host "Adding user" \$*.members "to" \$*.dlistname "DL" -ForegroundColor Yellow 
 
-write-host "Adding user" \$_.members "to" \$_.dlistname "DL" -ForegroundColor Yellow 
-
- 
-
-Add-DistributionGroupMember -Identity \$_.dlistname -Member \$_.members  
-
- 
+Add-DistributionGroupMember -Identity \$*.dlistname -Member \$*.members  
 
 } 
-
- 
