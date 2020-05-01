@@ -9,7 +9,7 @@
 ########################################################################################### 
 
 #
-Import-Csv .\add-members-to-dl01.csv | foreach { 
+Import-Csv add-members-to-dl01.csv | foreach { 
 
 write-host "Adding user" $_.members "to" $_.dlistname "DL" -ForegroundColor Yellow
 
