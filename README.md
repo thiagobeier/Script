@@ -98,6 +98,9 @@ Teams](https://github.com/thiagobeier/scripts/tree/master/26)
 27 – [ADDS, Office 365 and Teams management
 Groups](https://github.com/thiagobeier/scripts/tree/master/27)
 
+28 – [Office 365 – Exporting Shared Mailbox Permissions to CSV (domain
+based)](https://github.com/thiagobeier/scripts/tree/master/28)
+
 **Feedback**
 
 Please use the Issues tab to provide feedback. I will periodically create new
