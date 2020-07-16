@@ -1,0 +1,10 @@
+GroupName,CreateinO365,GroupType,Description,Members,Example,email
+All Sales Toronto,Y,Multi-purpose,Toronto Sales,"CN=Thiago Beier
+CN=John Doe
+CN=Steve Jobs
+CN=Bill Gates",,All-Sales-Toronto
+All Western Canada Sales,Y,Multi-purpose,Western Canada Sales,"CN=Thiago Beier
+CN=Tom Cat
+CN=Buzz Lightyear
+CN=Bill Gates
+CN=Thiago Germano",,All-Western-Canada-Sales
