@@ -101,6 +101,9 @@ Groups](https://github.com/thiagobeier/scripts/tree/master/27)
 28 – [Office 365 – Exporting Shared Mailbox Permissions to CSV (domain
 based)](https://github.com/thiagobeier/scripts/tree/master/28)
 
+29 – [ADDS - Creating Contacts in Active Directory from
+CSV](https://github.com/thiagobeier/scripts/tree/master/29)
+
 **Feedback**
 
 Please use the Issues tab to provide feedback. I will periodically create new
