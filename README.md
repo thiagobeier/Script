@@ -122,10 +122,10 @@ Regards,
 **Copyright © 2020 Thiago Beier Blog**
 
 <p align="center">
-  <a href="https://github.com/eddiejaoude?tab=followers">
+  <a href="https://github.com/thiagobeier?tab=followers">
     <img src="https://img.shields.io/github/followers/thiagobeier?label=Followers&logo=GitHub&style=for-the-badge" alt="GitHub badge" />
   </a>
-  <a href="http://twitter.com/eddiejaoude">
+  <a href="http://twitter.com/thiagobeier">
     <img src="https://img.shields.io/twitter/follow/thiagobeier?label=Twitter&logo=twitter&style=for-the-badge" />
   </a>
   <a href="http://youtube.com/user/julioarrudac?sub_confirmation=1">
