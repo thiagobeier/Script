@@ -128,7 +128,7 @@ Regards,
   <a href="http://twitter.com/thiagobeier">
     <img src="https://img.shields.io/twitter/follow/thiagobeier?label=Twitter&logo=twitter&style=for-the-badge" />
   </a>
-  <a href="http://youtube.com/user/julioarrudac?sub_confirmation=1">
+  <a href="http://youtube.com/user/thiagobeier?sub_confirmation=1">
     <img src="https://img.shields.io/youtube/views/UCMkXCLRGuhNvSsngFdHh_VA?label=YouTube&logo=YouTube&style=for-the-badge" />
   </a>
 </p>
