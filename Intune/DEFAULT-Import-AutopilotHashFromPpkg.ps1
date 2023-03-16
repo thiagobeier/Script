@@ -44,7 +44,7 @@ else {
 set-location $workdir
 
 $LogFolder = "$workdir"
-$logfile = "$LogFolder\graphapi-update-filters-$dt.log"
+$logfile = "$LogFolder\import-autopilot-hash-$dt.log"
 Start-Transcript -Path $logfile
 Start-Sleep -Seconds 5
 
