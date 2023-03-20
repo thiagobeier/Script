@@ -19,93 +19,93 @@ New and all scripts from Technet Gallery moved to here.
 rights.**
 
 1 - [Read domain list from CSV and export email domain
-data.](https://github.com/thiagobeier/scripts/tree/master/1)
+data.](https://github.com/thiagobeier/scripts/tree/master/other/1)
 
 2 - [List ADDS (active directory domain services) account
-summary.](https://github.com/thiagobeier/scripts/tree/master/2)
+summary.](https://github.com/thiagobeier/scripts/tree/master/other/2)
 
 3 - [Office365 - Assign ATP licenses from a
-file.](https://github.com/thiagobeier/scripts/tree/master/3)
+file.](https://github.com/thiagobeier/scripts/tree/master/other/3)
 
 4 - [Add members to a Distribution List (DL) from a CSV
-file.](https://github.com/thiagobeier/scripts/tree/master/4)
+file.](https://github.com/thiagobeier/scripts/tree/master/other/4)
 
 5 - [Create a Distribution List (DL) from CSV on Office
-365](https://github.com/thiagobeier/scripts/tree/master/5)
+365](https://github.com/thiagobeier/scripts/tree/master/other/5)
 
 6 - [Export Office365 User Roles to CSV (Admin
-Roles)](https://github.com/thiagobeier/scripts/tree/master/6)
+Roles)](https://github.com/thiagobeier/scripts/tree/master/other/6)
 
 7 - [Monitor DFS backlog and Send email
-notification.](https://github.com/thiagobeier/scripts/tree/master/7)
+notification.](https://github.com/thiagobeier/scripts/tree/master/other/7)
 
 8 - [Generate Random Password (ADDS & Azure AD /
-Office365)](https://github.com/thiagobeier/scripts/tree/master/8)
+Office365)](https://github.com/thiagobeier/scripts/tree/master/other/8)
 
 9 - [Retrieve all Office365 users and compare their displayname with
-ADDS](https://github.com/thiagobeier/scripts/tree/master/9)
+ADDS](https://github.com/thiagobeier/scripts/tree/master/other/9)
 
 10 - [Monitor a folder size on real-time every
-hour.](https://github.com/thiagobeier/scripts/tree/master/10)
+hour.](https://github.com/thiagobeier/scripts/tree/master/other/10)
 
-11 - [ADFS - Export](https://github.com/thiagobeier/scripts/tree/master/11)
+11 - [ADFS - Export](https://github.com/thiagobeier/scripts/tree/master/other/11)
 
 12 - [Creates a Standard User for ADDS and Office365
-Management](https://github.com/thiagobeier/scripts/tree/master/12)
+Management](https://github.com/thiagobeier/scripts/tree/master/other/12)
 
 13 - [Retrieve all Office365 users and compare their UPN userprincipalname with
-ADDS](https://github.com/thiagobeier/scripts/tree/master/13)
+ADDS](https://github.com/thiagobeier/scripts/tree/master/other/13)
 
 14 - [Configure your 1st ADDS
-Server](https://github.com/thiagobeier/scripts/tree/master/14)
+Server](https://github.com/thiagobeier/scripts/tree/master/other/14)
 
 15 - [Office365, Exchange, SharePoint and Skype For Business Powershell Profile
-Script](https://github.com/thiagobeier/scripts/tree/master/15)
+Script](https://github.com/thiagobeier/scripts/tree/master/other/15)
 
 16 - [Export All Distribution Lists Information and its members to
-CSV](https://github.com/thiagobeier/scripts/tree/master/16)
+CSV](https://github.com/thiagobeier/scripts/tree/master/other/16)
 
 17 - [Check if a DL (Distribution List) exists on Office
-365](https://github.com/thiagobeier/scripts/tree/master/17)
+365](https://github.com/thiagobeier/scripts/tree/master/other/17)
 
 18 - [Office365 & Azure Powershell Management
-Functions](https://github.com/thiagobeier/scripts/tree/master/18)
+Functions](https://github.com/thiagobeier/scripts/tree/master/other/18)
 
 19 - [SCCM Inventory and Assessment
-Scripts](https://github.com/thiagobeier/scripts/tree/master/19)
+Scripts](https://github.com/thiagobeier/scripts/tree/master/other/19)
 
 20 - [Check ADDS attributes (email,
-proxysmtpaddresses)](https://github.com/thiagobeier/scripts/tree/master/20)
+proxysmtpaddresses)](https://github.com/thiagobeier/scripts/tree/master/other/20)
 
 21 -
-[Hyperv-VMM-2012R2-UpdateKBList](https://github.com/thiagobeier/scripts/tree/master/21)
+[Hyperv-VMM-2012R2-UpdateKBList](https://github.com/thiagobeier/scripts/tree/master/other/21)
 
 22 - [SCCM inventory &
-assessment](https://github.com/thiagobeier/scripts/tree/master/22)
+assessment](https://github.com/thiagobeier/scripts/tree/master/other/22)
 
 23 - [Export SCCM apps, task sequence, collections, queries and
-packages.](https://github.com/thiagobeier/scripts/tree/master/23)
+packages.](https://github.com/thiagobeier/scripts/tree/master/other/23)
 
 24 - [Add Multiple Users Exchange Online contacts
-permission](https://github.com/thiagobeier/scripts/tree/master/24)
+permission](https://github.com/thiagobeier/scripts/tree/master/other/24)
 
 25 – [Connect to office 365, Exchange Online and Teams Using
-PowerShell](https://github.com/thiagobeier/scripts/tree/master/25)
+PowerShell](https://github.com/thiagobeier/scripts/tree/master/other/25)
 
 26 – [Search user and remove from a Team on Microsoft
-Teams](https://github.com/thiagobeier/scripts/tree/master/26)
+Teams](https://github.com/thiagobeier/scripts/tree/master/other/26)
 
 27 – [ADDS, Office 365 and Teams management
-Groups](https://github.com/thiagobeier/scripts/tree/master/27)
+Groups](https://github.com/thiagobeier/scripts/tree/master/other/27)
 
 28 – [Office 365 – Exporting Shared Mailbox Permissions to CSV (domain
-based)](https://github.com/thiagobeier/scripts/tree/master/28)
+based)](https://github.com/thiagobeier/scripts/tree/master/other/28)
 
 29 – [ADDS - Creating Contacts in Active Directory from
-CSV](https://github.com/thiagobeier/scripts/tree/master/29)
+CSV](https://github.com/thiagobeier/scripts/tree/master/other/29)
 
 30 – [ADDS - Creating Distribution Groups in Active Directory from
-CSV](https://github.com/thiagobeier/scripts/tree/master/30)
+CSV](https://github.com/thiagobeier/scripts/tree/master/other/30)
 
 **Feedback**
 
