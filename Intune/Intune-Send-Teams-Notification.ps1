@@ -27,8 +27,6 @@ $serial = (Get-CimInstance -CimSession $session -Class Win32_BIOS).SerialNumber
 
 $env:COMPUTERNAME
 $tmpgrouptag = "EMPTY"
-#$dt
-#$serial
 $groupTag = "CONTOSO"
 
 function SendTeamsNotification {
@@ -37,15 +35,15 @@ function SendTeamsNotification {
 
     $payload = @{
         "channel" = "#general"
-        #"text" = "Alert!!! New Windows Autopilot Device Name: $env:COMPUTERNAME added to BULC: $grouptag "
-        "text"    = "<style>h1 {text-align: center;}p {text-align: center;}div {text-align: center;}</style><h1><b>Alert</b></h1><br><table border=1><tr><th>Current Device Name</th><th>Current BULC code</th><th>Date & Time</th><th>SERIAL</th><th>New BULC code</th></tr><tr><td>$env:COMPUTERNAME</td><td>$($tmpgrouptag)</td><td>$dt</td><td>$serial</td><td>$groupTag</td></tr></table>"
+        #"text" = "Alert!!! New Windows Autopilot Device Name: $env:COMPUTERNAME added to Location: $grouptag "
+        "text"    = "<style>h1 {text-align: center;}p {text-align: center;}div {text-align: center;}</style><h1><b>Alert</b></h1><br><table border=1><tr><th>Current Device Name</th><th>Current Location code</th><th>Date & Time</th><th>SERIAL</th><th>New Location code</th></tr><tr><td>$env:COMPUTERNAME</td><td>$($tmpgrouptag)</td><td>$dt</td><td>$serial</td><td>$groupTag</td></tr></table>"
     }
 
     #then we invoke web request using the uri which is the Teamswebhook url alongside the post method to send our request
     Invoke-WebRequest -UseBasicParsing `
         -Body (ConvertTo-Json -Compress -InputObject $payload) `
         -Method Post `
-        -Uri "https://m365x58705501.webhook.office.com/webhookb2/xxxxxxx@yyyyyyyyy/IncomingWebhook/c88bf2bcfa8e498e9d67bfe192cf9a58/zzzzzzzzz"
+        -Uri "https://YOURTENANTNAME.webhook.office.com/webhookb2/xxxxxxx@yyyyyyyyy/IncomingWebhook/c88bf2bcfa8e498e9d67bfe192cf9a58/zzzzzzzzz"
     Write-Output "The condition was true"
 }
 # Function to upload imported / updated devices to SharePoint List
