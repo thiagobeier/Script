@@ -58,8 +58,8 @@ $graphApiVersion = "Beta"
 $uri = "https://graph.microsoft.com/$graphApiVersion/$($resource)"
 
 #variables
-$filterName = "Exclude - Norton" #This is the Filter Name
-$phase2GroupName = "McAfee Install Phase 2" #This is the Cloud-based sec. group Name for Phase2
+$filterName = "Exclude - McAfee" #This is the Filter Name
+$phase2GroupName = "Norton Install Phase 2" #This is the Cloud-based sec. group Name for Phase2
 
 #work on filters
 $Filters = Invoke-MSGraphRequest -HttpMethod GET -Url $uri
