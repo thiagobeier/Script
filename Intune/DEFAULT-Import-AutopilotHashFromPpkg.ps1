@@ -54,7 +54,7 @@ Start-Sleep -Seconds 5
 $AppId = 'YOUR-AZURE-AD-APP-ID'
 $TenantId = 'YOUR-TENANT-ID'
 $AppSecret = 'YOUR-AZURE-AD-APP-ID-SECRET'
-$GroupTag = "" #Location code for Acquired company or BLANK for CSI Default => TL Joined
+$GroupTag = "" #Location code for company location or BLANK for Default => Hybrid Azure AD Joined
 
 
 "Installing Packages"
