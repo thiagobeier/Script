@@ -54,11 +54,8 @@ Start-Sleep -Seconds 5
 $AppId = 'YOUR-AZURE-AD-APP-ID'
 $TenantId = 'YOUR-TENANT-ID'
 $AppSecret = 'YOUR-AZURE-AD-APP-ID-SECRET'
-<<<<<<< Updated upstream
-$GroupTag = "" #BULC code for any business unit or company or BLANK for Default => Hybrid Azure AD Joined
-=======
 $GroupTag = "" #Location code for Acquired company or BLANK for CSI Default => TL Joined
->>>>>>> Stashed changes
+
 
 "Installing Packages"
 
