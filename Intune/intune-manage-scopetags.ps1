@@ -18,7 +18,7 @@ function Write-Log {
 
         [Parameter(Mandatory = $false)]
         [Alias('LogPath')]
-        [string]$Path = 'C:\Logs\PowerShellLog.log', #update this $Path if you need to save logs on a different folder and file
+        [string]$Path = 'C:\Logs\PowerShellLog.log',
         
         [Parameter(Mandatory = $false)]
         [ValidateSet("Error", "Warn", "Info")]
@@ -147,17 +147,17 @@ function get-serial {
 #########################################################################################################################################
 
 $script = "Set-GroupTag"
-$version = "0.02"
+$version = "0.03"
 $importpath = "C:\temp\2023\03\23\computers.txt"
 write-host "Starting script '$script' version '$version'."
 write-host "`nPlease note: If you want to set the group tag of multiple computers, add them to the following text file one SERIAL number per line: '$importpath'`n"
 
 if (([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] 'Administrator')) {
-    Write-Log "User has correct permissions.. continuing."
+    Write-Log -Level Info "User has correct permissions.. continuing."
     write-host "User has correct permissions.. continuing."
 }
 else {
-    Write-Log "Please run this script as a user with local Administrator permissions."
+    Write-Log -Level Info "Please run this script as a user with local Administrator permissions."
     write-host "Please run this script as a user with local Administrator permissions."
 
     break
@@ -182,7 +182,7 @@ Select-GroupTag
 Select-ImportType
 #write-host "'$Global:ImportType'"
 
-Write-Log "reading current group tag values, please wait..."
+Write-Log -Level Info "reading current group tag values, please wait..."
 write-host "reading current group tag values, please wait..."
 
 # Get all autopilot devices (even if more than 1000)
@@ -193,7 +193,7 @@ If ($Global:ImportType -eq "Single") {
     # get specific device based on serial number
     get-serial
     #$global:serialnumber = "5CG1081VHY"
-    Write-Log "you entered: $global:serialnumber"
+    Write-Log -Level Info "you entered: $global:serialnumber"
     write-host "you entered: $global:serialnumber"
     $selecteddevice = $autopilotDevices | Where-Object { $_.serialNumber -eq $global:serialnumber }
     #$autopilotDevices.serialNumber | -Match $global:serialnumber
@@ -201,8 +201,8 @@ If ($Global:ImportType -eq "Single") {
 
     if ($selecteddevice) {
         $Global:oldGroupTag = $selecteddevice.groupTag
-        Write-Log "Old group tag: " $Global:oldGroupTag
-        Write-Log "New group tag: " $Global:newgroupTag
+        Write-Log -Level Info "Old group tag: $Global:oldGroupTag"
+        Write-Log -Level Info "New group tag: $Global:newgroupTag"
         write-host "Old group tag: " $Global:oldGroupTag
         write-host "New group tag: " $Global:newgroupTag
 
@@ -220,7 +220,7 @@ If ($Global:ImportType -eq "Single") {
 groupTag: `"$($autopilotDevice.groupTag)`",
 }
 "@
-            Write-Log "Updating entity: $($autopilotDevice.id) | groupTag: $($autopilotDevice.groupTag) | orderIdentifier: $($autopilotDevice.orderIdentifier)"
+            Write-Log -Level Info "Updating entity: $($autopilotDevice.id) | groupTag: $($autopilotDevice.groupTag) | orderIdentifier: $($autopilotDevice.orderIdentifier)"
             Write-Output "Updating entity: $($autopilotDevice.id) | groupTag: $($autopilotDevice.groupTag) | orderIdentifier: $($autopilotDevice.orderIdentifier)"
             Invoke-MSGraphRequest -HttpMethod POST -Content $requestBody -Url "deviceManagement/windowsAutopilotDeviceIdentities/$($autopilotDevice.id)/UpdateDeviceProperties" 
             #}
