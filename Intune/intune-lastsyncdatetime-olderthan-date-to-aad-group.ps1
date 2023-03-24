@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
 This script retrieve all devices from Intune older and newer than $limit (30 days default) and add all devices to a cloud-based sec. group AAD / assigned group
 
@@ -22,7 +22,7 @@ Blog: https://thebeier.com
 LinkedIn: https://www.linkedin.com/in/tbeier/
 Twitter: https://twitter.com/thiagobeier
 Date: 03/21/2023
-Version: 1.0
+Version: 1.1
 #>
 
 Clear-Host
@@ -33,7 +33,7 @@ $logfile = "$env:temp\lastsynced-devices-$dt.log"
 Start-Transcript -Path $logfile
 
 #Variables
-$targetaadgroupname = "All-AAD-Devices-Active-30-Days"
+$targetaadgroupname = "All-AAD-Devices-InActive-30-Days"
 
 #Connect to MSGraph and List all Windows Devices
 #Install-Module Microsoft.Graph -Scope AllUsers
@@ -43,22 +43,21 @@ $Devices = Get-IntuneManagedDevice -Filter "contains(operatingsystem, 'Windows')
 #Define the amount of days to exclude from the search
 
 $limit = (Get-Date).AddDays(-30) #older than 30 days
-
+#Badr eddine Zaki asked for only devices active in the last 30 days 
 #Uncomment this section if you need the group to add the devices that are older than 30 days to the group
-<#
 #added the opton to list older than 30 days
-$olderthanlimit = $Devices | Where-Object {$_.lastsyncdatetime -lt $limit} | select devicename,lastsyncdatetime,azureADDeviceId #older than 30 days
+$olderthanlimit = $Devices | Where-Object { $_.lastsyncdatetime -lt $limit } | Select-Object devicename, lastsyncdatetime, azureADDeviceId #older than 30 days
 #$olderthanlimit = $Devices | Where-Object {$_.lastsyncdatetime -lt $limit} #all devices info
 #$olderthanlimit = $Devices | Where-Object {$_.lastsyncdatetime -lt $limit} | export-csv -NoTypeInformation -Encoding all-devices-older-than-limit.csv #all devices info to csv
 "Older: $($olderthanlimit.count)"
-#>
 
-#Badr eddine Zaki asked for only devices active in the last 30 days 
+<#
 #Tthis section if you need the group to add the devices that are newer than 30 days to the group
 $newwerthanlimit = $Devices | Where-Object { $_.lastsyncdatetime -gt $limit } | Select-Object devicename, lastsyncdatetime, azureADDeviceId #only devicename and lastsyncdatetime
 #$newwerthanlimit = $Devices | Where-Object {$_.lastsyncdatetime -gt $limit}  #all devices info
 #$newwerthanlimit = $Devices | Where-Object {$_.lastsyncdatetime -gt $limit} | export-csv -NoTypeInformation -Encoding all-devices-greater-than-limit.csv
 "Newer: $($newwerthanlimit.count)"
+#>
 
 #add devices by name, object it to AAD sec. group
 #connect-azuread
@@ -71,11 +70,12 @@ $targetGroupmembers
 $aaddevices = ""
 $aaddevices = @()
 
-#$top10 = $newwerthanlimit | Select-Object -First 10 #used to test with top 10 entries, uncoment line 76 and comment line 78 for this test with top10
+#$top10 = $olderthanlimit | Select-Object -First 10 #used to test with top 10 entries, uncoment line 74 and comment line 75 for this test with top10
 
 #foreach ($deviceitem in $top10) { #uncoment to test with top 10 devices from aad list // also uncomment line 74
-#foreach ($deviceitem in $olderthanlimit) { #uncoment to switch to devices older than 30 days to sec. group // also uncomment block from lines 48 to 53
-foreach ($deviceitem in $newwerthanlimit) {
+foreach ($deviceitem in $olderthanlimit) {
+    #uncoment to switch to devices older than 30 days to sec. group // also uncomment block from lines 48 to 53
+    #foreach ($deviceitem in $newwerthanlimit) {
     #default all devices
     "working on Device Name $($deviceitem.devicename) , AzureADOBjectID $($deviceitem.azureADDeviceId)" #from Intune $Deviceslist
     ""
