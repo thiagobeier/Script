@@ -2,7 +2,7 @@
 # niall brady 2023/03/17
 # version 0.01 2023/03/17 Script creation
 # version 0.02 2023/03/22 adding bulk logic to read serials from csv
-# version 0.03 2023/03/23 added write-log function (saves to c:\logs\) and its funtion to all entries before write-host
+# version 0.03 2023/03/23 by Thiago Beier @thiagobeier , https://thebeier.com added write-log function (saves to c:\logs\) and its funtion to all entries before write-host
 
 clear-host
 
