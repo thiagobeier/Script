@@ -1,4 +1,4 @@
-#
+<#
 .SYNOPSIS
 This script list current device serial number (to be imported to windows autopilot in Intune)
 .DESCRIPTION
