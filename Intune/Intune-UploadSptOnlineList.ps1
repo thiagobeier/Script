@@ -75,11 +75,11 @@ $aadtenantname = 'YOUR-TENANT-NAME'
 
 
 # Powershell Modules
-"Installing Packages"
-Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Confirm:$false -Force:$true
-Install-Script get-windowsautopilotinfo -Confirm:$false -Force:$true
-Install-Module -Name Microsoft.Graph.Intune -Confirm:$false -Force:$true
-Install-Module -Name WindowsAutoPilotIntune -Confirm:$false -Force:$true
+#"Installing Packages"
+#Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Confirm:$false -Force:$true
+#Install-Script get-windowsautopilotinfo -Confirm:$false -Force:$true
+#Install-Module -Name Microsoft.Graph.Intune -Confirm:$false -Force:$true
+#Install-Module -Name WindowsAutoPilotIntune -Confirm:$false -Force:$true
 
 # Your Code here
 # Start-Transcript 
