@@ -85,11 +85,11 @@ $hash = $devDetail.DeviceHardwareData
 Import-Module Microsoft.Graph.Intune 
 Import-Module WindowsAutopilotIntune
 #this is the part that i had to hardcodeinto the runbook.
-$tenant = "letsintune.ca"
+$tenant = "YOURTENANT.ONMICROSOFT.COM" #YOURDOMAIN.COM
 $authority = "https://login.windows.net/$tenant"
-$clientid = '41427d2a-43de-4c12-9f3f-2004d9ff8da3'
-$tenantId = 'c24fd167-8ae3-438e-a7b5-a7dda448c5a9'
-$clientSecret = 'b1g8Q~N2SzJFzvR72rdgiQzCHdCJ2UPfb1vbeaz.'
+$clientid = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+$tenantId = 'yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy'
+$clientSecret = 'zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz'
 
 Update-MSGraphEnvironment -AppId $clientId -Quiet 
 Update-MSGraphEnvironment -AuthUrl $authority -Quiet 
@@ -98,8 +98,8 @@ Connect-MSGraph -ClientSecret $ClientSecret -Quiet
 #Get-AutopilotDevice
 
 #$certificate = "CN=PowerShell App-Only"
-$certificate = "ADMTHEBEIERCert"
-Connect-MgGraph -ClientId $clientId -TenantId $tenantId -CertificateThumbprint "B4FE59A45A9968DC9C79B1DA022AB9E37AF8BB53"
+$certificate = "CERTNAME" #UPATE CERT NAME HERE
+Connect-MgGraph -ClientId $clientId -TenantId $tenantId -CertificateThumbprint "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" #UPDATE YOUR SSL CERT THUMBPRINT HERE
 
 #device mgmt
 $alldevices = Get-AutopilotDevice | Select ID, serialnumber, Grouptag, addressableUserName
