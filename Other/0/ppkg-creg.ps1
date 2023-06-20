@@ -70,7 +70,7 @@ Install-Script -Name get-windowsautopilotinfocommunity -Confirm:$false -Force:$t
 "Registering Device in Windows autopilot devices"
 $DefaultGroupTag = "CREG"
 
-Set-executionpolicy -executionpolicy unrestricted -Force:$true
+#Set-executionpolicy -executionpolicy unrestricted -Force:$true
 SendTeamsNotification
 Start-Sleep 10
 get-windowsautopilotinfocommunity.ps1 -Online -TenantId f65d02be-9231-4769-9120-8d7f799652db -AppId 3e2602c0-9985-494a-aefe-dbecec36fa9a -AppSecret lNS8Q~5I1ccIroSuLOroDia8IVzKoxwo0jmHzaSy -GroupTag $DefaultGroupTag -assign -Reboot -Verbose
