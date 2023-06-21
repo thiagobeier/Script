@@ -54,26 +54,36 @@ $devDetail = (Get-CimInstance -CimSession $session -Namespace root/cimv2/mdm/dmm
 $hash = $devDetail.DeviceHardwareData
 
 "Installing Required PowerShell modules"
-<#
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+<#
 # Get NuGet
 $provider = Get-PackageProvider NuGet -ErrorAction Ignore
 if (-not $provider) {
 Write-Host "Installing provider NuGet"
-Find-PackageProvider -Name NuGet -ForceBootstrap -IncludeDependencies
-Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Confirm:$false -Force:$true
+Find-PackageProvider -Name NuGet -ForceBootstrap -IncludeDependencies -Force:$true
+Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.208 -Confirm:$false -Force:$true
+}
+#>
+
+$getwindowsautopilotinfocommunity = Get-InstalledScript get-windowsautopilotinfocommunity
+if ($getwindowsautopilotinfocommunity) {
+"getwindowsautopilotinfocommunity found"
+Invoke-RestMethod -Uri https://raw.githubusercontent.com/thiagobeier/Script/master/Other/0/get-windowsautopilotinfo.ps1 -OutFile c:\temp\get-windowsautopilotinfo.ps1
+} else {
+Install-Script -Name get-windowsautopilotinfocommunity -Confirm:$false -Force:$true
+Invoke-RestMethod -Uri https://raw.githubusercontent.com/thiagobeier/Script/master/Other/0/get-windowsautopilotinfo.ps1 -OutFile c:\temp\get-windowsautopilotinfo.ps1
 }
 
-Install-Script -Name get-windowsautopilotinfocommunity -Confirm:$false -Force:$true
-#>
+Invoke-RestMethod -Uri https://github.com/thiagobeier/Script/raw/master/Other/0/CMTrace.exe -OutFile c:\temp\CMTrace.exe
+./CMTrace.exe $logfile
 
 "Registering Device in Windows autopilot devices"
 $DefaultGroupTag = "BULC-AADJ"
 
 #Set-executionpolicy -executionpolicy unrestricted -Force:$true
-SendTeamsNotification
-Start-Sleep 10
-get-windowsautopilotinfocommunity.ps1 -Online -TenantId f65d02be-9231-4769-9120-8d7f799652db -AppId 3e2602c0-9985-494a-aefe-dbecec36fa9a -AppSecret lNS8Q~5I1ccIroSuLOroDia8IVzKoxwo0jmHzaSy -GroupTag $DefaultGroupTag -assign -Reboot -Verbose
+#SendTeamsNotification
+#Start-Sleep 10
+.\get-windowsautopilotinfo.ps1 -Online -TenantId f65d02be-9231-4769-9120-8d7f799652db -AppId 3e2602c0-9985-494a-aefe-dbecec36fa9a -AppSecret lNS8Q~5I1ccIroSuLOroDia8IVzKoxwo0jmHzaSy -GroupTag $DefaultGroupTag -assign -Reboot -Verbose
 
 
 # end
