@@ -45,16 +45,6 @@ if (Test-Path -Path $LogFolder) {
 	}
 #endregion
 
-#region TempFolder
-#Test to see if folder [$TempFolder]  exists"
-if (Test-Path -Path $TempFolder) {
-    "TempFolder folder exists!"
-} else {
-    "TempFolder folder doesn't exist."
-	New-Item -ItemType Directory -Path $TempFolder
-	}
-#endregion
-
 #Date and time
 $dt = Get-Date -Format "dd-MM-yyyy-HH-mm-ss"
 $logfile = "$LogFolder\autopilot-registration-$dt.log"
@@ -83,10 +73,12 @@ Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.208 -Confirm:$false -F
 Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.208 -Confirm:$false -Force:$true
 }
 
+# Registering Device in Windows autopilot devices
 "Registering Device in Windows autopilot devices"
 #$DefaultGroupTag = "AADJ" #this is for Azure AD domain join windows autopilot deployment profile
 $DefaultGroupTag = "" #this is for Hybrid Azure AD domain join windows autopilot deployment profile (default)
 
+# Sending Teams Notification to Teams Channel
 "Sending Teams Notification to Teams Channel"
 #SendTeamsNotification
 
