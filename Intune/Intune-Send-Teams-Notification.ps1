@@ -12,7 +12,7 @@ Blog: https://thebeier.com
 LinkedIn: https://www.linkedin.com/in/tbeier/
 Twitter: https://twitter.com/thiagobeier
 Date: 03/10/2023
-Version: 1.0
+Version: 1.1 - replaced previous invoke by Invoke-RestMethod
 #>
 
 # Functions
@@ -40,12 +40,11 @@ function SendTeamsNotification {
     }
 
     #then we invoke web request using the uri which is the Teamswebhook url alongside the post method to send our request
-    Invoke-WebRequest -UseBasicParsing `
-        -Body (ConvertTo-Json -Compress -InputObject $payload) `
-        -Method Post `
-        -Uri "https://YOURTENANTNAME.webhook.office.com/webhookb2/xxxxxxx@yyyyyyyyy/IncomingWebhook/c88bf2bcfa8e498e9d67bfe192cf9a58/zzzzzzzzz"
+	$myTeamsWebHook = "https://YOURTENANTNAME.webhook.office.com/webhookb2/xxxxxxx@yyyyyyyyy/IncomingWebhook/c88bf2bcfa8e498e9d67bfe192cf9a58/zzzzzzzzz"
+	Invoke-RestMethod -Method post -ContentType 'Application/Json' -Body (ConvertTo-Json -Compress -InputObject $payload) -Uri $myTeamsWebHook
     Write-Output "The condition was true"
 }
 # Function to upload imported / updated devices to SharePoint List
 
 SendTeamsNotification
+
