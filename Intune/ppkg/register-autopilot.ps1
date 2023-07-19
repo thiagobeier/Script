@@ -3,6 +3,8 @@ Description: Check if Windows Autopilot Device exists and import / update it bas
 Author: Thiago Beier thiago.beier@gmail.com @thiagobeier 
 Usage: registers Windows devices to autopilot - Intune - Default 
 Envirionment: DEV - CONTOSO
+Version: 1.1 - parameter Capitalized Case sensitive based on latest .\get-windowsautopilotinfo.ps1 or get-windowsautopilotinfocommunity.ps1 v3.0.4 - Wipe fix
+
 #############################################################################################################>
 
 
@@ -83,7 +85,7 @@ $DefaultGroupTag = "" #this is for Hybrid Azure AD domain join windows autopilot
 #SendTeamsNotification
 
 "Wait until device restarts to proceed with Autopilot"
-.\get-windowsautopilotinfo.ps1 -Online -TenantId <REPLACE-YOUR-TENANT-ID> -AppId <REPLACE-YOUR-APP-ID> -AppSecret <REPLACE-YOUR-APP-SECRET> -GroupTag $DefaultGroupTag -assign -Reboot -Verbose
+.\get-windowsautopilotinfo.ps1 -Online -TenantId <REPLACE-YOUR-TENANT-ID> -AppId <REPLACE-YOUR-APP-ID> -AppSecret <REPLACE-YOUR-APP-SECRET> -GroupTag $DefaultGroupTag -Assign -Reboot -Verbose
 
 
 # end
