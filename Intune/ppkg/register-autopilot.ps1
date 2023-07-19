@@ -4,7 +4,6 @@ Author: Thiago Beier thiago.beier@gmail.com @thiagobeier
 Usage: registers Windows devices to autopilot - Intune - Default 
 Envirionment: DEV - CONTOSO
 Version: 1.1 - parameter Capitalized Case sensitive based on latest .\get-windowsautopilotinfo.ps1 or get-windowsautopilotinfocommunity.ps1 v3.0.4 - Wipe fix
-
 #############################################################################################################>
 
 
