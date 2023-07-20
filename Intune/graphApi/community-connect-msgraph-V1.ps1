@@ -144,28 +144,6 @@ Function BoolToString() {
 
 #region : Functions
 
-function Get-ADDSDevicesList {
-	$strDomainController = (Get-ADDomainController -Discover -ForceDiscover -ErrorAction SilentlyContinue).HostName.Value
-	Write-Host "$($(Get-Date).ToString("yyyy-MM-dd HH:mm:ss.fff")): Domain Controller Selected ($strDomainController)"
-
-	if ($strDomainController) {
-		$global:AllADDScomputers = ""
-		"Connected to Domain Controller"
-		# List AD computers
-		$strAllADcomputers = Get-ADComputer -Server $strDomainController -Filter 'operatingsystem -ne "*server*" -and enabled -eq "true"' -ErrorAction SilentlyContinue
-		#$strAllADcomputers.count
-		#$strAllADcomputersResultStatus = $true
-		$global:AllADDScomputers = $strAllADcomputers
-	}
- else {
-		"Could not contact Domain Controller"
-		#$strAllADcomputersResultStatus = $false
-		break
-	}
-
-
-}
-
 function Install-Modules () {
 # The following command only required one time execution
 if ( Get-ExecutionPolicy)
